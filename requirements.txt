@@ -1,0 +1,9 @@
+cohere
+faiss-cpu
+numpy
+streamlit
+PyPDF2
+python-docx
+ebooklib
+beautifulsoup4
+logging
