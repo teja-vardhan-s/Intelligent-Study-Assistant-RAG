@@ -14,11 +14,8 @@ import time
 # Load environment variables from .env file
 load_dotenv()
 
-# Get the API key
-cohere_api_key = os.getenv("COHERE_API_KEY")
-
 # Initialize the Cohere client
-co = cohere.Client(cohere_api_key)
+co = cohere.Client()
 
 # Configure logging
 logging.basicConfig(
