@@ -5,5 +5,4 @@ PyPDF2
 python-docx
 ebooklib
 beautifulsoup4
-# logging==0.4.9.6
 dotenv
