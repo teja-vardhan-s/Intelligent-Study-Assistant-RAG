@@ -1,0 +1,27 @@
+name: Config Test
+
+on:
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  test-config-load:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.10'
+
+    - name: Install dependencies
+      run: |
+        pip install -r requirements.txt
+
+    - name: Simulate config load
+      env:
+        COHERE_API_KEY: ${{ secrets.COHERE_API_KEY }}
+      run: |
+        python -c "import os; assert os.getenv('COHERE_API_KEY'), 'COHERE_API_KEY missing'"
