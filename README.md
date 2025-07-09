@@ -40,7 +40,7 @@ To set up the Intelligent Study Assistant locally, follow these steps:
 3. Set up your Cohere API key in the environment:
 
    ```bash
-   export COHERE_API_KEY='your_api_key_here'
+   export CO_API_KEY='your_api_key_here'
    ```
 
 4. Run the application:
